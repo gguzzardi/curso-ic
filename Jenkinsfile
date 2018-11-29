@@ -27,7 +27,6 @@ pipeline {
            }
            post{
                always{
-                   junit 'integration-test/newman/*.xml'
                }
            }
         }
