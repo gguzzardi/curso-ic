@@ -6,7 +6,6 @@ pipeline {
     stages {
         stage('Build') {
          steps {
-             chmod +x build.sh
              sh "./build.sh"
          }
          post{
@@ -19,13 +18,11 @@ pipeline {
         }
         stage('Deploy') {
           steps {
-              chmod +x deploy.sh
               sh "./deploy.sh"
           }
         }
         stage('Verify') {
            steps {
-               chmod +x verify.sh
                sh "./verify.sh"
            }
            post{
