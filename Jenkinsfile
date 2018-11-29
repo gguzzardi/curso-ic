@@ -27,6 +27,7 @@ pipeline {
            }
            post{
                always{
+                   println 'Mas test reports'
                }
            }
         }
