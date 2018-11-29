@@ -11,7 +11,7 @@ pipeline {
          post{
             always{
 
-                println "ava se exportan los resultados de los test unitarios"
+                junit 'build/test-results/test/*.xml'
             }
          }
 
@@ -27,7 +27,6 @@ pipeline {
            }
            post{
                always{
-                   junit 'build/test-results/test/*.xml'
                    junit 'integration-test/newman/*.xml'
                }
            }
